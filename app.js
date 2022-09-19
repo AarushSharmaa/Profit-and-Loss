@@ -41,7 +41,7 @@ function calculateProfitandLoss(initial, quantity, current) {
 
         // rest
         outputBox.innerText = `No profit no loss : Bilkul ricks nahi lene ka`;
-        console.log("Kuch risk nahi h re baba")
+        // console.log("Kuch risk nahi h re baba")
     }
 
 }
