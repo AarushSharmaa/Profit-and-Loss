@@ -15,3 +15,8 @@ A web app for you to calculate your profits and losses.
 - CSS
 - Javascript
 - Deployed via Netlify
+
+## Scope for Improvements
+
+- Need to make it responsive across all screen sizes
+- Add cases to handle in case input is not a number
