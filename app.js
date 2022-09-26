@@ -42,7 +42,7 @@ function calculateProfitandLoss(initial, quantity, current) {
         // profit 
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
-        outputBox.innerText = `The profit is ${profit} and profit percentage is ${profitPercentage} % 🟢`;
+        outputBox.innerText = `The profit is ${profit} and profit percentage is ${profitPercentage.toFixed()} % 🟢`;
 
     } else {
 
