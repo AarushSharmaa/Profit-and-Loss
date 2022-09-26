@@ -22,8 +22,10 @@ function submitHandler() {
         alert("Please enter inputs. Do not leave any field blank.");
     }
 
-    calculateProfitandLoss(ip, qty, curr);
+    if (ip > 0 && qty > 0 && curr > 0) {
 
+        calculateProfitandLoss(ip, qty, curr);
+    }
 
 }
 
