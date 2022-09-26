@@ -7,7 +7,6 @@ var submitBtn = document.querySelector("#submit-btn");
 var outputBox = document.querySelector("#output-box");
 
 
-
 submitBtn.addEventListener("click", submitHandler);
 
 function submitHandler() {
@@ -15,14 +14,22 @@ function submitHandler() {
     var qty = Number(stocksQuantity.value);
     var curr = Number(currentPrice.value);
 
+    if (ip && curr) {
+        if (ip <= 0 || curr <= 0 || qty <= 0) {
+            alert("Negative values not allowed. Please enter only inputs greater than 0");
+        }
+    } else {
+        alert("Please enter inputs. Do not leave any field blank.");
+    }
+
     calculateProfitandLoss(ip, qty, curr);
+
 
 }
 
 // calculate profit, loss, profit percentage, loss percentage
 
 function calculateProfitandLoss(initial, quantity, current) {
-
     if (initial > current) {
 
         // loss
