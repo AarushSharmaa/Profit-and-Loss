@@ -16,10 +16,14 @@ function submitHandler() {
 
     if (ip && curr) {
         if (ip <= 0 || curr <= 0 || qty <= 0) {
-            alert("Negative values not allowed. Please enter only inputs greater than 0");
+            outputBox.innerText = "Negative values not allowed. Please enter only inputs greater than 0";
+            return;
+            // alert("Negative values not allowed. Please enter only inputs greater than 0");
         }
     } else {
-        alert("Please enter inputs. Do not leave any field blank.");
+        outputBox.innerText = "Please enter inputs, do not leave any field blank";
+        return;
+        a //lert("Please enter inputs. Do not leave any field blank.");
     }
 
     if (ip > 0 && qty > 0 && curr > 0) {
@@ -44,7 +48,7 @@ function calculateProfitandLoss(initial, quantity, current) {
         // profit 
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit / initial) * 100;
-        outputBox.innerText = `The profit is ${profit} and profit percentage is ${profitPercentage.toFixed()} % 🟢`;
+        outputBox.innerText = `The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)} % 🟢`;
 
     } else {
 
