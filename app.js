@@ -41,15 +41,17 @@ function calculateProfitandLoss(initial, quantity, current) {
     if (initial > current) {
 
         // loss
-        var loss = (initial - current) * quantity;
-        var lossPercentage = (loss / initial) * 100;
+        var loss = ((initial - current) * quantity).toFixed(2);
+        var lossPercentage = (((initial - current) * 100) / initial).toFixed(2);
+        document.body.style.backgroundColor = "red";
         outputBox.innerText = `The loss is ${loss} and loss percentage is ${lossPercentage} % 🔴`;
 
     } else if (current > initial) {
 
         // profit 
-        var profit = (current - initial) * quantity;
-        var profitPercentage = (profit / initial) * 100;
+        var profit = ((current - initial) * quantity).toFixed(2);
+        var profitPercentage = (((current - initial) * 100) / initial);
+        document.body.style.backgroundColor = "grey";
         outputBox.innerText = `The profit is ${profit} and profit percentage is ${profitPercentage.toFixed(2)} % 🟢`;
 
     } else {
