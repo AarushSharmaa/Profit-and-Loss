@@ -23,7 +23,7 @@ function submitHandler() {
     } else {
         outputBox.innerText = "Please enter inputs, do not leave any field blank";
         return;
-        a //lert("Please enter inputs. Do not leave any field blank.");
+        //alert("Please enter inputs. Do not leave any field blank.");
     }
 
     if (ip > 0 && qty > 0 && curr > 0) {
